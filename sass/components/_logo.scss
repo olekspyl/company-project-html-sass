@@ -1,34 +1,60 @@
-%logo-base {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-}
-
 .logo {
+    display: block;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.19;
+    color: var(--accent-text-color);
+  
 
-    &__header {
-        @extend %logo-base;
+    
+    
+    @media screen and (min-width: 1200px) {
+        font-size: 26px;
         padding-top: 24px;
         padding-bottom: 25px;
+        // padding-left: 200px;
+        }
+
+    &__web-accent {
+        color: var(--accent-text-color);
+    }
+
+&__header {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    color: var(--first-header-color);
+
+    @media screen and (min-width: 768px) {
+            padding: 26px 0px;
+            margin-right: 93px;
+        }
+
+    @media screen and (min-width: 1200px) {
+        padding: 26px 0px;
         margin-right: 93px;
-    };
+    }
+}
 
-    &__footer {
-        @extend %logo-base;
-        display: flex;
-        margin-bottom: 28px;
-    };
+&__footer {
+    margin-bottom: 20px;
+    padding: 0px;
+    text-align: center;
+    color: var(--accent-text-color);
+    
 
-    &--blue {
-        color: getColor('brand-color-blue');
-    };
+    @media screen and (min-width: 768px) {
+            padding: 0px;
+  
+        }
 
-    &--black {
-        color: getColor('logo-color-black');
-    };
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+    }
+}
 
-    &--white {
-        color: getColor('text-color-white');
-    };
-};
+&__web-white {
+    color: var(--first-title-color);
+}
+    }
